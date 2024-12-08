@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Delicacies</title>
+    <style>
+        
+        body {
+            overflow: hidden;
+            background-image: url("skibidi.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+        h1 {
+            color: beige;
+            text-align: center;
+        }
+        header {
+            background-color: cyan;
+            color: cyan;
+            padding: 10px 0;
+            text-align: right;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: cyan;
+            text-decoration: none;
+        }
+        h2 {
+            text-align: center;
+            color: cyan;
+        }
+        .con {
+            border: 1px solid;
+            border-radius: 5px;
+            background-color: pink;
+        }
+        .home-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: cyan;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: darkcyan;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="frame.html" onclick="navigateTo('frame.html'); return false;">Home</a></li>
+            <li><a href="#about" onclick="navigateTo('frame_about.html'); return false;">About</a></li>
+            <li><a href="#contact" onclick="navigateTo('frame_contact.html'); return false;" class="con">Contact</a></li>
+        </ul>
+    </nav>
+     
+    <frameset rows="30%,*" frameborder="0">
+        <frame name="frame_title" src="frame_title.html">
+        <frameset cols="25%,*" frameborder="0">
+            <frame name="frame_menu" src="frame_menu.html">
+            <frame name="display" src="E:/FINALS/Finals - Copy/frame/frame_ChickenInasal.html">
+        </frameset>
+    </frameset>
+
+     
+    <script>
+        function goHome() {
+            if (window.top !== window.self) {
+                window.top.location.href = "frame.html";
+            } else {
+                window.location.href = "frame.html";
+            }
+        }
+
+        function navigateTo(page) {
+           
+            if (window.top !== window.self) {
+                window.top.location.href = page;
+            } else {
+                window.location.href = page;
+            }
+        }
+    </script>
+</body>
+</html>
